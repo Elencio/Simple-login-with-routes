@@ -1,0 +1,199 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+/* Replace with the URL from your Font Awesome account */
+
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+  --box: #bcbcbc;
+  --green: #00FF00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #e5e5e5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile img {
+  margin-top: 2rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.profile h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-bottom: 1.25rem;
+  font-family: 'Press Start 2P', cursive;
+}
+.main div {
+  margin:auto;
+  width: 326px;
+  height: 70px;
+  left: 556px;
+  top: 486px;
+  background: #858585;
+  border: 2px solid #FAF7FD;
+  border-radius: 8px;
+  margin-bottom: 10px;
+ }
+
+  .main div:hover {
+      background-color: #BB99DD;
+      border: 4px solid #BB99DD;
+      border-radius: 5px;
+      transition: 0.5s;
+ }
+
+   .main div a{
+    height: 59px;
+    font-family: 'Poppins sans-serif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-content: center;
+    text-transform: uppercase;
+    color: #fff;
+   
+   }
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #999;
+  margin: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.links a:hover {
+  transform: scale(1.2);
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.dark-mode {
+  display: none;
+}
+
+.light-mode .dark-mode {
+  display: inline-block;
+}
+
+.light-mode .toggle-switch input:checked+.slider {
+  background-color: #222;
+}
+
+.dark-mode .toggle-switch input:checked+.slider {
+  background-color: #f2f2f2;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #999;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.round {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark {
+  background-color: var(--dark);
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+label {
+  background: var(--label);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  position: relative;
+  height: 30px;
+  width: 65px;
+}
+
+
+label .ball {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 26px;
+  width: 26px;
+
+  transform: translateX(0);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + label .ball {
+  transform: translateX(35px);
+}
